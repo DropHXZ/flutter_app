@@ -56,9 +56,16 @@ class MyLoginHomePage extends State<MyLoginHome> {
       body: new Center(
         child: new Column(
           children: <Widget>[
-            new TextField(
-              maxLength: 10,
-              onSubmitted: _nameChange,
+            new Container(
+              decoration: new BoxDecoration(
+                border: Border.all(width: 1, color: Colors.green),
+              ),
+              margin: const EdgeInsets.fromLTRB(10, 40, 10, 20),
+              padding: const EdgeInsets.all(5),
+              child: new TextField(
+                maxLength: 10,
+                onSubmitted: _nameChange,
+              ),
             ),
             new RaisedButton(
               onPressed: _counterAdd,
